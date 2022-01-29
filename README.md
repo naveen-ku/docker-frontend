@@ -1,5 +1,7 @@
 # Docker frontend
 
+ # Start development server
+
 ## Step 1: Build docker image
 
 ```bash
@@ -27,4 +29,10 @@ Since the docker run command is big and a little complex, `docker-compose.yml` i
 
 ```bash
 docker-compose up --build
+```
+
+# Start production server
+```bash
+docker build .
+docker run -p 8080:80 <image_id>
 ```
