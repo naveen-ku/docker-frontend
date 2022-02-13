@@ -6,4 +6,4 @@ before_install:
   - docker build -t naveenku/docker-frontend -f Dockerfile.dev .
 
 script:
-  - docker run naveen/docker-frontend npm run test -- --coverage
+  - docker run -e CI=true naveen/docker-frontend npm run test   # Test suite exits automatically
